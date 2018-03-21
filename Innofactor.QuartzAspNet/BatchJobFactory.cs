@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Innofactor.QuartzAspNet {
 
-  public class BatchJobFactory : IJobFactory {
+  internal class BatchJobFactory : IJobFactory {
     private readonly IServiceProvider _serviceProvider;
 
     public BatchJobFactory(IServiceProvider serviceProvider) {
@@ -27,7 +27,10 @@ namespace Innofactor.QuartzAspNet {
     }
   }
 
-  public class ScopedJob : IJob {
+  /// <summary>
+  /// Scoped wrapper for jobs.
+  /// </summary>
+  internal class ScopedJob : IJob {
 
     private IJob actualJob;
     private IServiceScope scope;

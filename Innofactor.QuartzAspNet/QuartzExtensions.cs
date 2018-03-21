@@ -11,6 +11,11 @@ namespace Innofactor.QuartzAspNet {
 
   public static class QuartzExtensions {
 
+    /// <summary>
+    /// Register Quartz.NET and a list of jobs for the DI container.
+    /// </summary>
+    /// <param name="services">Services.</param>
+    /// <param name="jobs">List of Quartz jobs to register.</param>
     public static void UseQuartz(this IServiceCollection services, params Type[] jobs) {
 
       services.AddSingleton<IJobFactory, BatchJobFactory>();
