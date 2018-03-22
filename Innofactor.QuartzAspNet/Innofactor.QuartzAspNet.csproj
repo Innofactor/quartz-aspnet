@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>ASP.NET Core extensions for Quartz.NET</Description>
+    <PackageIconUrl>http://rappen.net/Cinteros/innofactor.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
