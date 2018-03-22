@@ -4,6 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>ASP.NET Core extensions for Quartz.NET</Description>
     <PackageIconUrl>http://rappen.net/Cinteros/innofactor.png</PackageIconUrl>
+    <Authors>Innofactor</Authors>
+    <RepositoryUrl>https://github.com/Innofactor/quartz-aspnet</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
