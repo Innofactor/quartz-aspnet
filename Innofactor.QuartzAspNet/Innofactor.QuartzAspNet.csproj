@@ -6,6 +6,8 @@
     <PackageIconUrl>http://rappen.net/Cinteros/innofactor.png</PackageIconUrl>
     <Authors>Innofactor</Authors>
     <RepositoryUrl>https://github.com/Innofactor/quartz-aspnet</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Innofactor/quartz-aspnet</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/Innofactor/quartz-aspnet/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
