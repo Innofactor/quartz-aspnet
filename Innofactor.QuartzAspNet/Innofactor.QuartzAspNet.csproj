@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -8,6 +8,7 @@
     <RepositoryUrl>https://github.com/Innofactor/quartz-aspnet</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Innofactor/quartz-aspnet</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/Innofactor/quartz-aspnet/blob/master/LICENSE</PackageLicenseUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
