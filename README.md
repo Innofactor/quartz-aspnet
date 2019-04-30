@@ -8,9 +8,24 @@ In Startup.cs:
 
 ```csharp
 
+    /// Register scheduler and jobs for DI ///
     public void ConfigureServices(IServiceCollection services) {
       // ...
       services.UseQuartz(typeof(HelloJob), typeof(HommaJob));
+    }
+    
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
+
+      var configuration = app.ApplicationServices.GetService<IOptions<AppConfig>>();
+      var parameters = configuration.Value;
+      var trigger = TriggerBuilder.Create()
+        .WithIdentity(nameof(HelloJob))
+        .WithCalendarIntervalSchedule(x => x.WithIntervalInMinutes(parameters.HelloJobIntervalInMinutes).PreserveHourOfDayAcrossDaylightSavings(true))
+        .Build();
+
+      // Fetch IScheduler whenever afterwards from DI container and configure schedules for jobs
+      var scheduler = app.ApplicationServices.GetService<IScheduler>();
+      scheduler.StartJob<HelloJob>(trigger);
     }
 
 ```
